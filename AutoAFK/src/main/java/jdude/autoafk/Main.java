@@ -27,7 +27,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ServerTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@Mod(modid = Main.MODID, useMetadata = true)
+@Mod(modid = Main.MODID, useMetadata = true, acceptableRemoteVersions = "*", serverSideOnly = true)
 public class Main {
 	public static final String MODID = "autoafk";
 	public static final Map<UUID, PlayerInfo> PLAYER_INFOS = new HashMap<UUID, PlayerInfo>();
