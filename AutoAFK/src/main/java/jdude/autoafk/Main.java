@@ -64,6 +64,9 @@ public class Main {
 	@SubscribeEvent
 	public void chatty(ServerChatEvent chat) {
 		PlayerInfo info = PLAYER_INFOS.get(chat.getPlayer().getGameProfile().getId());
+		if (info == null) {
+			return;
+		}
 		info.afkTime = 0;
 		if (info.isAfk) {
 			FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList()

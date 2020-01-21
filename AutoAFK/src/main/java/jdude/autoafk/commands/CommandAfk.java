@@ -25,6 +25,11 @@ public class CommandAfk extends CommandBase {
 	}
 	
 	@Override
+	public int getRequiredPermissionLevel() {
+		return 0;
+	}
+	
+	@Override
 	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
 		PlayerInfo info = Main.PLAYER_INFOS.get(((EntityPlayerMP) sender).getGameProfile().getId());
 		
