@@ -35,12 +35,12 @@ public class CommandAfk extends CommandBase {
 		
 		if (info.isAfk) {
 			FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList()
-					.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.player.getDisplayNameString() + " is no longer AFK.")));
+					.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.player.getDisplayNameString() + " ya no esta AFK.")));
 			info.isAfk = false;
 			info.afkTime = 0;
 		} else {
 			FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList()
-					.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.player.getDisplayNameString() + " is now AFK.")));
+					.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.player.getDisplayNameString() + " ahora esta AFK.")));
 			info.isAfk = true;
 			info.afkTime = ModConfig.maxAfkTime * 1200;
 		}

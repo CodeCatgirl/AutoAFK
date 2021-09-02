@@ -70,7 +70,7 @@ public class Main {
 		info.afkTime = 0;
 		if (info.isAfk) {
 			FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList()
-					.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.player.getDisplayNameString() + " is no longer AFK.")));
+					.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.player.getDisplayNameString() + " ya no esta AFK.")));
 			info.isAfk = false;
 		}
 	}
@@ -86,7 +86,7 @@ public class Main {
 					if (info.getValue().isAfk() && !info.getValue().isAfk) {
 						info.getValue().isAfk = true;
 						FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList()
-								.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.getValue().player.getDisplayNameString() + " is now AFK.")));
+								.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.getValue().player.getDisplayNameString() + " ahora esta AFK.")));
 					} else {
 						info.getValue().afkTime++;
 					}
@@ -96,7 +96,7 @@ public class Main {
 					info.getValue().afkTime = 0;
 					if (info.getValue().isAfk) {
 						FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList()
-								.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.getValue().player.getDisplayNameString() + " is no longer AFK.")));
+								.sendMessage(new TextComponentString(ColorH.addColor("&e" + info.getValue().player.getDisplayNameString() + " ya no esta AFK.")));
 					}
 					info.getValue().isAfk = false;
 					
